@@ -1,0 +1,55 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: cascadia code;
+    background-color: #33153F;
+}
+
+h1 {
+    margin-left: 10px;
+    filter: invert(65%) sepia(44%) saturate(5683%) hue-rotate(337deg) brightness(103%) contrast(102%);
+}
+
+nav {
+    display: flex;
+    height: 10%;
+    width:  90%;
+    margin: auto;
+    background-color: #F3F3F3;
+    border-radius: 25px;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+}
+
+img {
+    filter: invert(65%) sepia(44%) saturate(5683%) hue-rotate(337deg) brightness(103%) contrast(102%);
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/********************************************/
+
+#upnav {
+    height: 10%;
+}
+
+.button {
+    background-color: #734CF4;
+    padding: 15px;
+    border-radius: 10px;
+}
