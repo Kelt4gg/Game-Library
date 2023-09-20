@@ -4,24 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="welcome.css">
-    <script src="welcome.js"></script>
+    <script defer src="welcome.js"></script>
     <title>Welcome</title>
 </head>
 <body>
     <div id="upnav">
-        <img src="3142581-200.png" width="50px" height="50px" ><h1>Orgameizer</h1>
+        <img src="logo.png" width="50px" height="50px" ><h1>Orgameizer</h1>
     </div>
     <nav>
         <div>
             <ul>
                 <li>
-                    <a class="button">Log in</a><a class="button">Register</a>
+                    <a class="button purple" id="log">Log in</a> <a class="button purple" id="reg">Register</a>
                 </li>
                 <li>
-                    <a class="button">About Us</a>
+                    <a class="button orange">About Us</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <nav id="shadow">
+        <div>
+            <h2> Orgameizer</h2>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a class="button purple" id="log">Log in</a> <a class="button purple" id="reg">Register</a>
+                </li>
+                <li>
+                    <a class="button orange">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+    </main>
+
+    <div id="about">
+        <div id="about_title">
+            <h1>About</h1>
+        </div>
+        <div id="about_parts">
+            <div>
+                <h3>Whats is</h3>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim.</p>
+            </div>
+            <div id="middle">
+                <h3>Features</h3>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim.</p>
+            </div>
+            <div>
+                <h3>Future</h3>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim.</p>
+            </div>
+        </div>
+    </div>
+    
+    <dialog>
+        <div id="left_side">
+            <h1>Log In</h1>
+            <div style="margin-top: 20px;">
+                <label>Username</label>
+                <input>
+            </div>
+            <div style="margin-bottom: 20px";>
+                <label>Password</label>
+                <input>
+                <a>Forgot password</a>
+            </div>
+            <div >
+                <input type="button" value="Enter" class="orange">
+                <label>Not a member? <a onclick="toggle()">Register Now</a></label>
+            </div>
+        </div>
+        <div id="right_side">
+            <a id="close">X</a>
+            <h1 style="align-self: center; text-align: center; margin: auto;">Welcome Back</h1>
+        </div>
+    </dialog>
 </body>
 </html>
