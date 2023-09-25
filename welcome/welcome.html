@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script defer src="scripts.js"></script>
+    <title>Welcome to Orgameizer</title>
+</head>
+<body>
+
+    <nav class="glass">
+
+        <div>
+
+            <div class="title">
+
+                <img src="../logo.png" width="50px" height="50px">
+
+                <a>ORGAMEIZER</a>
+
+            </div>
+
+            <ul>
+
+                <li><a id="log">Log In</a> <a id="reg">Sing Up</a></li>
+                <li><a><i class="fa-brands fa-github"></i> Github</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <main>
+
+        <div class="text">
+            <div>
+                <h1>About</h1>
+
+                <p>O orgamaizer é web app open source para a organização de jogos de multiplas bibliotecas e plataformas. Este é um projeto universitário, pedimos desculpas por alguma falha no sistema.</p>
+
+            </div>
+        </div>
+
+        <div class="glass main">
+        
+        </div>
+    </main>
+
+    <footer class="glass">
+        <div style="margin-right: 20px;">
+
+        </div>
+
+        <div>
+
+        </div>
+    </footer>
+
+    <dialog>
+        <form id="left" class="back">
+
+            <div class="sections">
+                <h2>Log In</h2>
+            </div>
+            <div class="sections">
+                <label>Username</label>
+                <input type="text">
+
+                <label>Password</label>
+                <input type="password">
+                <a>Forgot password?</a>
+            </div>
+            <div class="sections">
+                <input type="button" value="Enter">
+                <label>Not a member? </label><a onclick="toggle()" >Register Now</a>
+            </div>
+
+        </form>
+        <form id="right" class="back">
+
+            <div class="sections">
+                <h2>Log In</h2>
+            </div>
+            <div class="sections">
+                <label>Username</label>
+                <input type="text">
+
+                <label>Password</label>
+                <input type="password">
+
+                <label>re-Password</label>
+                <input type="password">
+
+                <label>Email</label>
+                <input type="password">
+            </div>
+            <div class="sections">
+                <input type="button" value="Enter">
+                <label>Not a member?</label><a onclick="toggle()">Register Now</a>
+            </div>
+
+        </form>
+        <a id="close">X</a>
+    </dialog>
+</body>
+</html>

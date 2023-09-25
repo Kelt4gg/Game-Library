@@ -1,0 +1,223 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.801);
+    font-family: Cascadia code;
+}
+
+body {
+    /* moon
+    background: rgb(140,171,161);
+    background: linear-gradient(212deg, rgba(140,171,161,1) 0%, rgba(109,122,128,1) 5%, rgba(15,42,63,1) 25%, rgba(8,20,30,1) 97%);*/
+
+    /*ink*/
+    background: rgb(12,230,242);
+    background: linear-gradient(212deg, rgba(12,230,242,1) 0%, rgba(30,87,156,1) 2%, rgba(255,5,70,1) 7%, rgba(102,15,49,1) 35%, rgba(50,3,37,1) 62%, rgba(9,1,13,1) 100%);
+}
+
+h1 {
+    color: #51ebf3cc;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.title > a {
+    font-size: 20px;
+}
+
+nav, main, footer {
+    width: 90%;
+    margin: auto;
+    margin-block: 20px;
+    
+}
+
+nav {
+    height: 10%;
+    font-weight: bold;
+    margin-top: 0;
+    
+}
+
+nav > div {
+    display: flex;
+    justify-content: center;
+    margin-inline: 20px;
+    align-items: center;
+}
+nav > div > * {
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+main {
+    height:50%;
+    display: flex;
+    justify-content: center;
+}
+
+main > div {
+    width: 30%;
+    background-color: #92c0b127;
+    border: 3px inset #c95e7aa4;
+    border-radius: 25px;
+    margin-inline: 10px;
+}
+
+li {
+    height: 20%;
+    border: solid 2px #b9284fa4;
+    margin: 10px;
+    border-radius: 20px;
+    padding-block: 10px;
+    padding-inline: 2px;
+}
+a {
+    cursor: pointer;
+}
+
+li > a {
+    border: 1px solid hidden;
+    border-radius: 20px;
+    padding: 8px;
+    transition:linear 300ms;
+}
+
+li > a:hover {
+    background-color: #1e579c;
+    color: snow;
+    transition:linear 300ms;
+    
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+.text > div {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    
+}
+
+.text > div > p {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 70%;
+    overflow: auto;
+    
+}
+
+footer {
+    height: 30%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main {
+    width: 60%;
+}
+
+.glass {
+    border-radius: 25px;
+    display: flex;
+}
+
+.glass > div {
+    height: 98%;
+    width: 98%;
+    border-radius: 25px;
+    background-color: #0f0113ea;
+    margin: auto;
+    border: 3px inset #c95e7aa4;
+}
+
+img {
+    filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(300deg) brightness(102%) contrast(80%)
+}
+
+footer > div {
+    background-color: #39235567;
+}
+
+
+dialog {
+    height: 400px;
+    width: 500px;
+    border: 0;
+    border-radius: 25px;
+    display: none;
+    justify-content: space-between;
+    position: relative;
+    background: rgb(12,230,242);
+background: radial-gradient(circle, rgba(12,230,242,1) 0%, rgba(0,152,219,1) 35%, rgba(30,87,156,1) 81%);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+#left, #right {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sections{
+    margin-block: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.front {
+    height: 90%;
+    width: 55%;
+    background-color: snow;
+    border: 3px inset rgba(114, 121, 116, 0.699);
+    border-radius: 25px;
+    visibility: visible;
+}
+
+.back {
+    visibility: hidden;
+}
+
+#close {
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: rgba(175, 39, 39, 0.568);
+    border-radius: 0px 0px 0px 30px;
+    transition: 300ms;
+}
+
+.sections > a {
+    color: #ff0546;
+}
+
+#close:hover {
+    background-color: rgba(143, 8, 8, 0.822);
+    transition: 300ms;
+}
