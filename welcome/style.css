@@ -16,8 +16,9 @@ body {
     background: linear-gradient(212deg, rgba(12,230,242,1) 0%, rgba(30,87,156,1) 2%, rgba(255,5,70,1) 7%, rgba(102,15,49,1) 35%, rgba(50,3,37,1) 62%, rgba(9,1,13,1) 100%);
 }
 
-h1 {
+h1, h2 {
     color: #51ebf3cc;
+    text-align: center;
 }
 
 .title {
@@ -51,10 +52,12 @@ nav > div {
     margin-inline: 20px;
     align-items: center;
 }
-nav > div > * {
+
+#logo {
+    filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(300deg) brightness(102%) contrast(80%)
 }
 
-ul {
+.bar {
     list-style: none;
     display: flex;
     padding-left: 0;
@@ -74,7 +77,64 @@ main > div {
     margin-inline: 10px;
 }
 
-li {
+section {
+    width: 100%;
+    max-width: 48em;
+    margin: 10px;
+    position: relative;
+    border: 2px inset rgba(255, 250, 250, 0.281);
+    border-radius: 20px;
+    background-color: rgba(255, 250, 250, 0.493);
+}
+
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandaroty;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    
+}
+
+#slider-nav {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.dots {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+}
+
+.dots:hover {
+    opacity: 1;
+}
+
+.actived {
+    background-color: #51ebf3cc;
+    opacity: 1;
+}
+
+.bar_item {
     height: 20%;
     border: solid 2px #b9284fa4;
     margin: 10px;
@@ -84,16 +144,23 @@ li {
 }
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.801);
 }
 
-li > a {
+a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.bar_item > a {
     border: 1px solid hidden;
     border-radius: 20px;
     padding: 8px;
     transition:linear 300ms;
 }
 
-li > a:hover {
+.bar_item > a:hover {
     background-color: #1e579c;
     color: snow;
     transition:linear 300ms;
@@ -116,16 +183,12 @@ li > a:hover {
     margin: auto;
     margin-bottom: 30px;
     height: 70%;
-    overflow: auto;
+    overflow-y: auto;
     
 }
 
 footer {
     height: 30%;
-}
-
-h1 {
-    text-align: center;
 }
 
 .main {
@@ -146,13 +209,35 @@ h1 {
     border: 3px inset #c95e7aa4;
 }
 
-img {
-    filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(300deg) brightness(102%) contrast(80%)
+footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
-footer > div {
-    background-color: #39235567;
+footer > div >  * {
+    width: 80%;
 }
+
+footer > div > p {
+    overflow-y: auto;
+}
+
+footer > div > ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow-y: auto;
+}
+
+footer > div > ul > li{
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+
 
 
 dialog {
@@ -163,8 +248,9 @@ dialog {
     display: none;
     justify-content: space-between;
     position: relative;
-    background: rgb(12,230,242);
-background: radial-gradient(circle, rgba(12,230,242,1) 0%, rgba(0,152,219,1) 35%, rgba(30,87,156,1) 81%);
+    border: 3px inset #c95e7aa4;
+    background: rgb(156,23,59);
+    background: radial-gradient(circle, rgba(156,23,59,1) 0%, rgba(69,3,39,1) 55%);
 }
 
 dialog::backdrop {
@@ -191,8 +277,7 @@ dialog::backdrop {
 .front {
     height: 90%;
     width: 55%;
-    background-color: snow;
-    border: 3px inset rgba(114, 121, 116, 0.699);
+    background-color:snow;
     border-radius: 25px;
     visibility: visible;
 }
@@ -202,7 +287,7 @@ dialog::backdrop {
 }
 
 #close {
-    color: black;
+    color: snow;
     position: absolute;
     top: 0;
     right: 0;
@@ -218,6 +303,11 @@ dialog::backdrop {
 }
 
 #close:hover {
-    background-color: rgba(143, 8, 8, 0.822);
+    background-color: rgba(122, 12, 12, 0.822);
     transition: 300ms;
+}
+
+#suggestion {
+    display: flex;
+    flex-direction: column;
 }

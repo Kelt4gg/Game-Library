@@ -53,3 +53,41 @@ function reveal() {
     pass.type = pass.type == "password" ? "text" : "password";
     
 }
+
+
+var slideNow = 1;
+var dots = document.querySelectorAll(".dots");
+let counter = 1;
+dots.forEach(dot => {
+    dot.href = "#slide" + counter
+    counter++;
+    dot.addEventListener("click", () => {
+        window.clearInterval(timer);
+        timer = setInterval(passSlide, 3000);
+        setSlide(dot.href[dot.href.length - 1])
+    })
+});
+
+function setSlide(slideNumber) {
+    window.location.href = "#slide" + slideNumber;
+    for(var k = 0; k < dots.length; k++) {
+        if(k+1 == slideNumber) {
+             dots[k].classList.add("actived")
+        } else {
+            dots[k].classList.remove("actived")
+        }
+    }
+}
+
+console.log(dots)
+
+var timer = setInterval(passSlide, 3000);
+
+function passSlide() {
+    slideNow++; 
+    if(slideNow > dots.length) {
+        slideNow = 1;
+    }
+    setSlide(slideNow)
+}
+
