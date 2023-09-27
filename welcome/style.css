@@ -7,13 +7,13 @@ html, body {
 }
 
 body {
-    /* moon
+    
     background: rgb(140,171,161);
-    background: linear-gradient(212deg, rgba(140,171,161,1) 0%, rgba(109,122,128,1) 5%, rgba(15,42,63,1) 25%, rgba(8,20,30,1) 97%);*/
+    background: linear-gradient(212deg, rgba(140,171,161,1) 0%, rgba(109,122,128,1) 5%, rgba(15,42,63,1) 25%, rgba(8,20,30,1) 97%);
 
-    /*ink*/
+    /*ink
     background: rgb(12,230,242);
-    background: linear-gradient(212deg, rgba(12,230,242,1) 0%, rgba(30,87,156,1) 2%, rgba(255,5,70,1) 7%, rgba(102,15,49,1) 35%, rgba(50,3,37,1) 62%, rgba(9,1,13,1) 100%);
+    background: linear-gradient(212deg, rgba(12,230,242,1) 0%, rgba(30,87,156,1) 2%, rgba(255,5,70,1) 7%, rgba(102,15,49,1) 35%, rgba(50,3,37,1) 62%, rgba(9,1,13,1) 100%); */
 }
 
 h1, h2 {
@@ -69,10 +69,10 @@ main {
     justify-content: center;
 }
 
+
 main > div {
     width: 30%;
     background-color: #92c0b127;
-    border: 3px inset #c95e7aa4;
     border-radius: 25px;
     margin-inline: 10px;
 }
@@ -82,7 +82,6 @@ section {
     max-width: 48em;
     margin: 10px;
     position: relative;
-    border: 2px inset rgba(255, 250, 250, 0.281);
     border-radius: 20px;
     background-color: rgba(255, 250, 250, 0.493);
 }
@@ -136,11 +135,11 @@ section {
 
 .bar_item {
     height: 20%;
-    border: solid 2px #b9284fa4;
     margin: 10px;
     border-radius: 20px;
     padding-block: 10px;
     padding-inline: 2px;
+    border: 1px solid #429ba0d2;
 }
 a {
     cursor: pointer;
@@ -175,20 +174,23 @@ a:visited {
     width: 90%;
     height: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
     
 }
 
 .text > div > p {
     width: 90%;
-    margin: auto;
     margin-bottom: 30px;
-    height: 70%;
+    height: 50%;
     overflow-y: auto;
     
 }
 
 footer {
-    height: 30%;
+    height: 25%;
 }
 
 .main {
@@ -204,16 +206,15 @@ footer {
     height: 98%;
     width: 98%;
     border-radius: 25px;
-    background-color: #0f0113ea;
+    background-color: #02060a00;
     margin: auto;
-    border: 3px inset #c95e7aa4;
 }
 
 footer > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center
 }
 
 footer > div >  * {
@@ -230,7 +231,13 @@ footer > div > ul {
     overflow-y: auto;
 }
 
-footer > div > ul > li{
+.suggestions{
+    font-size: large;
+    text-decoration: underline;
+}
+
+footer > div > ul > li >a:hover {
+    color: rgb(133, 122, 122);
 }
 
 h2 {
@@ -248,7 +255,6 @@ dialog {
     display: none;
     justify-content: space-between;
     position: relative;
-    border: 3px inset #c95e7aa4;
     background: rgb(156,23,59);
     background: radial-gradient(circle, rgba(156,23,59,1) 0%, rgba(69,3,39,1) 55%);
 }
@@ -256,6 +262,17 @@ dialog {
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(3px);
+}
+
+.footer {
+    width: 100%;
+    height: 5%;
+    background-color: #02060a73;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #left, #right {

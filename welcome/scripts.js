@@ -79,8 +79,6 @@ function setSlide(slideNumber) {
     }
 }
 
-console.log(dots)
-
 var timer = setInterval(passSlide, 3000);
 
 function passSlide() {
