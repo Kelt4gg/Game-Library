@@ -244,8 +244,54 @@ h2 {
     margin-top: 10px;
 }
 
+.footer {
+    width: 100%;
+    height: 5%;
+    background-color: #02060a73;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transition: height 300ms, color 300ms;
+}
 
+.footer:hover {
+    background-color: rgba(5, 18, 27, 0.945);
+    height: 20%;
+    transition: height 300ms, color 300ms;
+}
 
+.footer  i {
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+
+.footer div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#suggestion {
+    display: flex;
+    flex-direction: column;
+}
+
+.hoverfobic {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 500ms;
+}
+
+.hoverlover {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 500ms;
+}
 
 dialog {
     height: 400px;
@@ -253,10 +299,10 @@ dialog {
     border: 0;
     border-radius: 25px;
     display: none;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    background: rgb(156,23,59);
-    background: radial-gradient(circle, rgba(156,23,59,1) 0%, rgba(69,3,39,1) 55%);
+    background: rgba(5, 18, 27, 0.945);
 }
 
 dialog::backdrop {
@@ -264,43 +310,53 @@ dialog::backdrop {
     backdrop-filter: blur(3px);
 }
 
-.footer {
+dialog a {
+    color: #1e579c;
+}
+
+#login, #register {
+    position: relative;
+    opacity: 0;
+    transition: opacity 500ms;
+    height: 100%;
     width: 100%;
-    height: 5%;
-    background-color: #02060a73;
-    position: absolute;
-    bottom: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
 }
 
-#left, #right {
-    padding: 16px;
+#login > * {
+}
+
+#register {
+}
+
+.side_text {
+    width: 40%;
+    height: 100%;
+}
+form {
+    width: 60%;
+    height: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: space-evenly;
+    background-color: snow;
+    border-radius: 25px;
 }
 
-.sections{
+
+
+.sections1, .sections2, .sections3{
     margin-block: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
 }
 
-.front {
-    height: 90%;
-    width: 55%;
-    background-color:snow;
-    border-radius: 25px;
-    visibility: visible;
-}
 
-.back {
-    visibility: hidden;
+.sections3 {
+    display: flex;
 }
 
 #close {
@@ -315,16 +371,7 @@ dialog::backdrop {
     transition: 300ms;
 }
 
-.sections > a {
-    color: #ff0546;
-}
-
 #close:hover {
     background-color: rgba(122, 12, 12, 0.822);
     transition: 300ms;
-}
-
-#suggestion {
-    display: flex;
-    flex-direction: column;
 }

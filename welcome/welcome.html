@@ -38,7 +38,7 @@
             <div>
                 <h1>About</h1>
 
-                <p>O orgamaizer é web app open source para a organização de jogos de multiplas bibliotecas e plataformas. Este é um projeto universitário, pedimos desculpas por alguma falha no sistema.</p>
+                <p>O games hub é web app open source para a organização de jogos de multiplas bibliotecas e plataformas. Este é um projeto universitário, pedimos desculpas por alguma falha no sistema.</p>
 
             </div>
         </div>
@@ -48,8 +48,8 @@
             <section>
                 <div class="slider">
                     <img id="slide1" src="./imgs/darksouls1.jpeg">
-                    <img id="slide2" src="./imgs/darksouls2.jpg">
-                    <img id="slide3" src="./imgs/darksouls3.jpg">
+                    <img id="slide2" src="./imgs/animal_crossing.jpg">
+                    <img id="slide3" src="./imgs/tails.jpg">
                     <img id="slide4" src="./imgs/eldenring.jpg">
                     <img id="slide5" src="./imgs/minecraft_cover.jpg">
                 </div>
@@ -86,53 +86,67 @@
         </div>
     </footer>
     <div class="footer">
-        <label>Mussum Ipsum, cacilds vidis litro abertis.</label>
+        <div class="hoverfobic">
+            <label>Mussum Ipsum, cacilds vidis litro abertis.</label>
+            <i class="fa-solid fa-angles-down" style="color: rgba(255, 255, 255, 0.801);"></i>
+        </div>
+        <div class="hoverlover">
+            <label>bleh</label>
+        </div>
+        
     </div>
 
     <dialog>
-        <form id="left" class="back">
+        <div  id="login">
+            <form>
 
-            <div class="sections">
-                <h2>Log In</h2>
-            </div>
-            <div class="sections">
-                <label>Username</label>
-                <input type="text">
+                <div class="sections1">
+                    <h2>Log In</h2>
+                </div>
+                <div class="sections2">
+                    <label>Username</label>
+                    <input type="text">
+    
+                    <label>Password</label>
+                    <input type="password">
+                    <a>Forgot password?</a>
+                </div>
+                <div class="sections3">
+                    <input type="button" value="Enter">
+                    <label>Not a member? <a onclick="toggle()">Register Now</a></label>
+                </div>
+    
+            </form>
+            <div class="side_text"></div>
+        </div>
+        <div  id="register">
+            <div class="side_text"></div>
+            <form>
 
-                <label>Password</label>
-                <input type="password">
-                <a>Forgot password?</a>
-            </div>
-            <div class="sections">
-                <input type="button" value="Enter">
-                <label>Not a member? </label><a onclick="toggle()" >Register Now</a>
-            </div>
+                <div class="sections1">
+                    <h2>Register</h2>
+                </div>
+                <div class="sections2">
+                    <label>Username</label>
+                    <input type="text">
+    
+                    <label>Password</label>
+                    <input type="password">
+    
+                    <label>re-Password</label>
+                    <input type="password">
+    
+                    <label>E-mail</label>
+                    <input type="password">
+                </div>
+                <div class="sections3">
+                    <input type="button" value="Enter">
+                    <label>Not a member? <a onclick="toggle()">Register Now</a></label>
+                </div>
+            </form>
 
-        </form>
-        <form id="right" class="back">
-
-            <div class="sections">
-                <h2>Log In</h2>
-            </div>
-            <div class="sections">
-                <label>Username</label>
-                <input type="text">
-
-                <label>Password</label>
-                <input type="password">
-
-                <label>re-Password</label>
-                <input type="password">
-
-                <label>Email</label>
-                <input type="password">
-            </div>
-            <div class="sections">
-                <input type="button" value="Enter">
-                <label>Not a member?</label><a onclick="toggle()">Register Now</a>
-            </div>
-
-        </form>
+            
+        </div>
         <a id="close">X</a>
     </dialog>
 </body>

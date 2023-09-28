@@ -6,8 +6,8 @@ log.addEventListener("click", () => toggleModal("log"))
 reg.addEventListener("click", () => toggleModal("reg"))
 
 var modal = document.getElementsByTagName("dialog")[0];
-var left = document.getElementById("left");
-var right = document.getElementById("right");
+var login = document.getElementById("login");
+var register = document.getElementById("register");
 
 var sideNow = "";
 function toggleModal(side) {
@@ -23,15 +23,19 @@ function toggleModal(side) {
 
 function toggleSide() {
     if(sideNow == "left") {
-        left.classList.replace("back", "front")
-        right.classList.replace("front", "back")
+        login.style.display = "flex";
+        login.style.opacity = 1;
+        register.style.display = "none";
+        register.style.opacity = 0;
         
     } else {
-        right.classList.replace("back", "front")
-        left.classList.replace("front", "back")
+        register.style.display = "flex";
+        register.style.opacity = 1;
+        login.style.display = "none";
+        login.style.opacity = 0;
     }
+    console.log(sideNow)
 }
-
 
 modal.addEventListener("close", () => {
     modal.style.display = "none";
@@ -45,6 +49,7 @@ closer.addEventListener("click" , () => {
 
 function toggle() {
     sideNow = sideNow == "left" ? "right" : "left";
+    console.log(sideNow)
     toggleSide();
 }
 
@@ -64,7 +69,9 @@ dots.forEach(dot => {
     dot.addEventListener("click", () => {
         window.clearInterval(timer);
         timer = setInterval(passSlide, 3000);
-        setSlide(dot.href[dot.href.length - 1])
+        let slideNumber = dot.href[dot.href.length - 1]
+        setSlide(slideNumber)
+        slideNow = slideNumber;
     })
 });
 
@@ -89,3 +96,15 @@ function passSlide() {
     setSlide(slideNow)
 }
 
+var footer = document.querySelector(".footer");
+var hoverfobic = document.querySelector(".hoverfobic")
+var hoverlover = document.querySelector(".hoverlover")
+footer.addEventListener("mouseover", () => {    
+    hoverfobic.style.opacity = "0";
+    hoverlover.style.opacity = "1";
+});
+
+footer.addEventListener("mouseleave", () => {    
+    hoverfobic.style.opacity = "1";
+    hoverlover.style.opacity = "0";
+});
