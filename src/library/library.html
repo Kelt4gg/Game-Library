@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="scripts.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>library</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <div class="top">
+                <img src="imgs/userphoto.png" alt="User_photo">
+            </div>
+
+            <div class="mid">
+                <label>TestAccount00</label>
+                <label>Games in Account: </label>
+                <a>Settings</a>
+            </div>
+
+            <div class="bottom">
+                <button><a href="../welcome/welcome.html">Exit</a></button>
+            </div>
+        </div>
+        <div id="middle" >
+            <nav>
+                <div style="width:80%; display: flex;">
+                    <a onclick="toggle('l')"><i class="fa-regular fa-user fa-xl"></i></a>
+                    <div id="textInput">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text">
+                    </div>
+                </div>
+                <ul>
+                    <li><a onclick="selectRandomGame()"><i class="fa-solid fa-dice-three fa-lg"></i></a></li>
+                    <li><a id="add"><i class="fa-solid fa-circle-plus fa-lg"></i></a></li>
+                    <li><a onclick="toggle('r')"><i class="fa-solid fa-filter fa-lg"></i> </a></li>
+                </ul>
+            </nav>
+            <div id="frame">
+                <div id="tester"></div>
+                <div id="games-flex">
+                </div>
+            </div>
+            <footer>
+    
+            </footer>
+        </div>
+        <div id="right">
+            <div class="top"></div>
+            <div class="mid">
+                <label>Plataforms</label>
+                <select name="plataformsf" id="plataformsf" multiple>
+                    <option value="1">PC</option>
+                    <option value="2">Playstation</option>
+                    <option value="3">Xbox</option>
+                    <option value="4">Nintendo</option>
+                </select>
+
+                <label>Categories</label>
+                <select name="categoriesf" id="categoriesf" multiple>
+                    <option value="1">Ação</option>
+                    <option value="2">Aventura</option>
+                    <option value="3">RPG</option>
+                    <option value="4">Estratégia</option>
+                    <option value="5">Esporte e Corrida</option>
+                    <option value="6">Simulação</option>
+                    <option value="7">Mundo aberto</option>
+                    <option value="8">Terror</option>
+                    <option value="9">Sobrevivencia</option>
+                    <option value="10">Um Jogador</option>
+                    <option value="11">Multi Jogador</option>
+                </select>
+                
+                <label>Launch date</label>
+                <input type="date">
+
+                <label>Nota</label>
+                <div class="range">
+                    0
+                    <input type="range" min="0" max="10" step="1">
+                    10
+                </div>
+            </div>
+            <div class="bot"></div>
+        </div>
+    </div>
+
+    <dialog class="add-game">
+        <form action="" class="add-form">
+            <div class="top">
+                <h1>Add game</h1>
+            </div>
+            <div class="mid">
+                <label>Game Name</label>
+                <input type="text" required id="game_name">
+
+                <label>Plataform</label>
+                <select name="plataforms" id="plataforms" multiple required>
+                    <option value="PC">PC</option>
+                    <option value="Playstation">Playstation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Nintendo">Nintendo</option>
+                </select>
+
+                
+
+                <label>Categories</label>
+                <select name="categories" id="categories" multiple required>
+                    <option value="Ação">Ação</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Estratégia">Estratégia</option>
+                    <option value="Esporte e Corrida">Esporte e Corrida</option>
+                    <option value="Simulação">Simulação</option>
+                    <option value="Mundo aberto">Mundo aberto</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Sobrevivencia">Sobrevivencia</option>
+                    <option value="Um Jogador">Um Jogador</option>
+                    <option value="MultiJogador">MultiJogador</option>
+                </select>
+
+                <label>Launch date</label>
+                <input type="date" id="game_launch_date">
+
+                <label>Nota</label>
+                <div class="range" id="game_nota">
+                    0
+                    <input type="range" min="0" max="10" step="1">
+                    10
+                </div>
+
+                <label>Image url</label>
+                <input type="file" accept="image/png, image/jpeg" id="game_image">
+            </div>
+
+            <div class="bottom">
+                <input type="reset" value="Clear">
+                <input type="button" value="Enter" onclick="add()">
+            </div>
+
+            <a id="close">X</a>
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.0/dist/js/multi-select-tag.js"></script>
+    </dialog>
+
+    <dialog class="info-game">
+        <h2></h2>
+    </dialog>
+</body>
+</html>

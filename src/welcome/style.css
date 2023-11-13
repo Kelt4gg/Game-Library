@@ -102,7 +102,6 @@ section {
     aspect-ratio: 16/9;
     flex: 1 0 100%;
     scroll-snap-align: start;
-    object-fit: cover;
     
 }
 
@@ -149,7 +148,6 @@ a {
 
 a:visited {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.801);
 }
 
 .bar_item > a {
@@ -291,6 +289,8 @@ h2 {
     align-items: center;
     justify-content: center;
     transition: opacity 500ms;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 dialog {
@@ -303,6 +303,27 @@ dialog {
     align-items: center;
     position: relative;
     background: rgba(5, 18, 27, 0.945);
+
+    >* input {
+        width: 80%;
+    }
+
+    >* h2 {
+        color: #27457f;
+    }
+
+    .side_text {
+        position: relative;
+        color: snow;
+        margin: 5px;
+        
+        > label {
+            text-align: center;
+            top: 30%;
+            position: absolute;
+            font-size: 20px;
+        }
+    }
 }
 
 dialog::backdrop {
@@ -357,6 +378,10 @@ form {
 
 .sections3 {
     display: flex;
+
+    >* {
+        margin: 5px;
+    }
 }
 
 #close {
