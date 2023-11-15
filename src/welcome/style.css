@@ -102,7 +102,7 @@ section {
     aspect-ratio: 16/9;
     flex: 1 0 100%;
     scroll-snap-align: start;
-    
+    background-size: contain;
 }
 
 #slider-nav {
@@ -189,6 +189,10 @@ a:visited {
 
 footer {
     height: 25%;
+    
+    > div {
+        border: 3px solid #92c0b127;
+    }
 }
 
 .main {
