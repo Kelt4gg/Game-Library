@@ -90,6 +90,8 @@ function loadGames() {
         jogo.remove();
     })
     games.style.display = "flex";
+
+    document.querySelector(".mid").children[0].children[1].innerHTML = "Jogos na conta: " + gamesProp.length;
     
     for(let k = 0; k < gamesProp.length; k++) {
         let game = document.createElement("div");
@@ -142,10 +144,10 @@ function toggle(side) {
     wrapper.style.gridTemplateColumns = (left + "%") + (middle + "%") + (right + "%")
 
 }
-var modal = document.querySelector(".add-game");
+var addgame_modal = document.querySelector(".add-game");
 var addbutton = document.querySelector("#add");
 addbutton.addEventListener("click", () => {
-    openmodal(modal)
+    openmodal(addgame_modal)
 })
 var addform = document.querySelector(".add-form");
 
@@ -179,14 +181,14 @@ function add() {
         image: image
     })
     loadGames();
-    modal.close();
+    addgame_modal.close();
 }
 
 
 
 var closer = document.getElementById("close");
 closer.addEventListener("click" , () => {
-    modal.close();
+    addgame_modal.close();
 })
 
 function selectRandomGame() {
@@ -198,4 +200,51 @@ function selectRandomGame() {
     
 }
 
+let opa = 0;
+function toggleThemes() {
+    
+    let themeSelection = document.querySelector(".theme_selection")
+    if(opa == 0) {
+        themeSelection.style.visibility = "visible";
+        themeSelection.style.opacity = 1;
+        opa = 1;
+    } else {
+        opa = 0
+        themeSelection.style.opacity = 0
+        themeSelection.style.visibility = "hidden"
+        
+    }
+    
+}
+/*
+    part0 == nav
+    part1 == footer
+    part2 == left
+    part3 == right
+    part4 == back
+*/ 
+let parts = []
+for(let k = 0; k <= 4; k++) {
+    parts.push(document.querySelector(".part"+k))
+} 
 
+function turnDefault() {
+    parts[0].style.backgroundColor = "#0c0e0d"
+    parts[1].style.backgroundColor = "#0c0e0d"
+    parts[2].style.backgroundColor = "#0c0e0d"
+    parts[3].style.backgroundColor = "#0c0e0d"
+    parts[4].style.background  = "linear-gradient(212deg, rgba(140,171,161,1) 0%, rgba(109,122,128,1) 5%, rgba(15,42,63,1) 25%, rgba(8,20,30,1) 97%)";
+}
+function turnBeach() {
+    console.log(parts[0])
+    parts[0].style.backgroundColor = "#f3cfa4";
+    parts[1].style.backgroundColor = "#f3cfa4";
+    parts[2].style.backgroundColor = "#b97f5f";
+    parts[3].style.backgroundColor = "#b97f5f";
+    parts[4].style.background = "linear-gradient(233deg, rgba(243,207,164,1) 1%, rgba(128,184,162,1) 17%, rgba(48,159,155,1) 46%, rgba(16,108,114,1) 80%)";
+
+}
+
+function turnOld() {
+    
+}

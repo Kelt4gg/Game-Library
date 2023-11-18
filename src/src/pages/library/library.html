@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <script defer src="scripts.js"></script>
+    <link href="./local-css/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../resources/imgs/logo.ico">
+    <script defer src="./local-js/scripts.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,23 +14,31 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="left">
+        <div id="left" class="part2">
             <div class="top">
-                <img src="imgs/userphoto.png" alt="User_photo">
+                <img src="./imgs/userphoto.png" alt="User_photo">
             </div>
 
             <div class="mid">
-                <label>Conta Teste</label>
-                <label>Games in Account: 6</label>
-                <a>Configurações</a>
+                <div>
+                    <label>Conta Teste</label>
+                    <label>Games in Account: 6</label>
+                    <a>Detalhes da conta</a>
+                </div>
+
+                <div class="theme_selection">
+                    <a class="themes default" onclick="turnDefault()"></a>
+                    <a class="themes beach" onclick="turnBeach()"></a>
+                </div>
             </div>
 
             <div class="bottom">
-                <button><a href="../welcome/welcome.html">Exit</a></button>
+                <button class="theme"><a onclick="toggleThemes()">Temas</a></button>
+                <button class="exit"><a href="../../index.html">Sair</a></button>
             </div>
         </div>
-        <div id="middle" >
-            <nav>
+        <div id="middle" class="part4">
+            <nav class="part0">
                 <div style="width:80%; display: flex;">
                     <a onclick="toggle('l')"><i class="fa-regular fa-user fa-xl"></i></a>
                     <div id="textInput">
@@ -48,11 +57,11 @@
                 <div id="games-flex">
                 </div>
             </div>
-            <footer>
+            <footer class="part1">
     
             </footer>
         </div>
-        <div id="right">
+        <div id="right" class="part3">
             <div class="top"></div>
             <div class="mid">
                 <label>Plataformas</label>

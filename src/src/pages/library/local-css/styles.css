@@ -232,16 +232,41 @@ input[type="text"]:focus {
     > div {
         width: 80%;
         display: flex;
+        justify-content: space-around;
+
         
+
+        > div:nth-of-type(1) {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+
+            > label, a {
+                align-self:normal;
+                color: snow;
+                margin: 0px;
+                margin-block: 10px;
+                overflow: hidden;
+                text-wrap: nowrap;
+                text-align: center;
+            }
+        }
+        
+        
+
+        
+    }
+
+    .mid {
         > label, a {
             align-self:normal;
             color: snow;
             margin: 0px;
             margin-block: 10px;
             overflow: hidden;
+            text-wrap: nowrap;
+            text-align: center;
         }
-
-        
     }
 
     .range {
@@ -261,26 +286,81 @@ input[type="text"]:focus {
     }
 
     .mid {
-        height: 70%;
+        height: 60%;
         flex-direction: column;
 
-        > label {
-            
+        > div {
+            > label {
+            }
+    
+            > a {
+                padding: 10px;
+                border: 2px solid snow;
+                border-radius: 15px;
+            }
+    
+            > a:hover {
+                background-color: gray;
+            }
+
         }
+
+        .theme_selection {
+            width: 100%;
+            height: 50%;
+            background-color: #ffffff;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-items: center;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s linear;
+
+            .themes {
+                width: 50%;
+                height: 50%;
+            }
+
+            .default {
+                background-color: rgba(15,42,63,1);
+            }
+            
+            .beach {
+                background-color: #f7b771;
+            }
+
+            .dracula {
+                background-color: rebeccapurple;
+            }
+
+            .old {
+                background-color: #89C170;
+            }
+
+            .themes:hover {
+                border: 2px solid grey;
+            }
+        }
+
+        
     }
 
     .bottom {
-        height: 10%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+
         > button {
-            background-color: rgba(255, 0, 0, 0.479);
             width: 100%;
             height: 30px;
             border-radius: 20px;
-            color: rgba(231, 238, 236, 0.952);
             font-weight: bold;
             border: none;
             margin: auto;
             cursor: pointer;
+            color:snow;
 
             > a {
                 display: flex;
@@ -289,10 +369,21 @@ input[type="text"]:focus {
                 margin: 0;
                 align-items: center;
                 justify-content: center;
+                color:snow;
+                text-decoration: none;
             }
         }
 
-        > button:hover {
+        .theme {
+            background-color: brown;
+        }
+
+        .exit {
+            color: rgba(231, 238, 236, 0.952);
+            background-color: rgba(255, 0, 0, 0.479);
+        }
+
+        .exit {
             background-color: rgba(146, 0, 0, 0.479);
         }
 

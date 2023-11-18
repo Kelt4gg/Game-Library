@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./resources/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./resources/imgs/logo.ico">
+
+    <script defer src="./resources/js/scripts.js"></script>
+    <script defer src="./pages/index/local-js/scripts.js"></script>
+
+    <!---External lib-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+    <title>GameHub</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <div class="nav-items-left">
+                <img class="logo" src="./resources/imgs/logo.png">
+                <label>GamesHub</label>
+            </div>
+            <div class="nav-items-right">
+                <div class="enter button">
+                    <a onclick="openenter('log')">Login</a><a onclick="openenter('reg')">Sing Up</a>
+                </div>
+                <div class="git button">
+                    <a href="https://github.com/Kelt4gg/Game-Library" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="center">
+            <div class="about pane">
+                <div class="inside-pane">
+                    <label class="header">Sobre</label>
+                    <p>O games hub é web app open source para a organização de jogos de multiplas bibliotecas e plataformas. 
+                        Este é um projeto universitário, pedimos desculpas por alguma falha no sistema.</p>
+                </div>
+            </div>
+            <div class="carrousel">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="slide1" src="./pages/index/imgs/darksouls1.jpeg">
+                        <img id="slide2" src="./pages/index/imgs/animal_crossing.jpg">
+                        <img id="slide3" src="./pages/index/imgs/tails.jpg">
+                        <img id="slide4" src="./pages/index/imgs/eldenring.jpg">
+                        <img id="slide5" src="./pages/index/imgs/minecraft_cover.jpg">
+                    </div>
+                    <div class="slider-nav">
+                        <a class="dots actived"></a>
+                        <a class="dots"></a>
+                        <a class="dots"></a>
+                        <a class="dots"></a>
+                        <a class="dots"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <fieldset class="pane">
+                <legend class="header">Sugestões de Jogos</legend>
+                <div class="inside-pane">
+                    <div class="list">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="pane">
+                <legend class="header">Implementações futuras</legend>
+                <div class="inside-pane">
+                    <div class="list">
+                        <div class="button">
+                            <label>Seleção de temas</label>  
+                        </div>
+
+                        <div class="button">
+                            <label>Menu de edição de jogo</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </main>
+
+    <footer class="hoverable">
+        <div>
+            <label>As pessoas por tras desse projeto</label>
+        </div>
+        <div>
+            <label>Kevin S. - <a></a></label>
+            <label>Nathalia Lima - <a></a></label>
+            <label>Igor Gonçalves dos Santos - <a></a></label>
+            <label>Marissa Paula - <a></a></label>
+            <label>Rafael Santana - <a></a></label>
+        </div>
+    </footer>
+    <footer class="unhoverable"></footer>
+
+    <dialog class="enter-dialog">
+        <a class="closer">X</a>
+        <div  id="login">
+            <form>
+
+                <div class="sections1">
+                    <h2>Log In</h2>
+                </div>
+                <div class="sections2">
+                    <label>Username</label>
+                    <input type="text">
+    
+                    <label>Password</label>
+                    <input type="password">
+                    <a>Forgot password?</a>
+                </div>
+                <div class="sections3">
+                    <input type="button" value="Enter">
+                    <label>Not a member? <a onclick="toggle()">Register Now</a></label>
+                </div>
+    
+            </form>
+            <div class="side_text">
+                <label>Bem vindo de volta</label>
+                
+            </div>
+        </div>
+        <div  id="register">
+            <div class="side_text">
+                <label>Seja bem vindo ao Game space</label>
+            </div>
+            <form>
+
+                <div class="sections1">
+                    <h2>Register</h2>
+                </div>
+                <div class="sections2">
+                    <label>Username</label>
+                    <input type="text">
+    
+                    <label>Password</label>
+                    <input type="password">
+    
+                    <label>re-Password</label>
+                    <input type="password">
+    
+                    <label>E-mail</label>
+                    <input type="password">
+                </div>
+                <div class="sections3">
+                    <input type="button" value="Enter">
+                    <label>Is a member? <a onclick="toggle()">Login Now</a></label>
+                    <a href="./pages/library/library.html">Test Account</a>
+                </div>
+            </form>
+
+            
+        </div>
+    </dialog>
+</body>
+</html>
